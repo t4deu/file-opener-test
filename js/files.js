@@ -139,7 +139,7 @@
  
         if (typeof(errorCallback) != 'function') {
             errorCallback = function(e){
-              alert(e);
+              alert('error: ' + JSON.stringify(e));
             };
         }
  
@@ -159,7 +159,7 @@
                 }       
             );      
         } catch (e) {
-            alert(e);
+            alert('error: ' + JSON.stringify(e));
         }
         
     }
