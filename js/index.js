@@ -19,7 +19,7 @@
 var file = null;
 function downloadFile(url) {
   console.log(url);
-  download(url, function(f) {
+  Files.download(url, function(f) {
   console.log('finished');
     alert(JSON.stringify(f));
     file = f;
@@ -27,7 +27,8 @@ function downloadFile(url) {
 }
 
 function openFile() {
-  open(file);
+  console.log('Opening file');
+  Files.open(file);
 }
 
 var app = {

@@ -126,9 +126,10 @@
         'numbers': 'application/vnd.apple.numbers',
         'pages': 'application/vnd.apple.pages',
     };
-
-    function open(path, type, successCallback, errorCallback) {
- 
+    var Files = {};
+    
+    Files.open = function(path, type, successCallback, errorCallback) {
+        console.log('OOIIIIII');
         if (typeof(successCallback) != 'function') {
             successCallback = function(){
               alert('success');
@@ -176,7 +177,7 @@
     }
 
  
-    var download = function(url, callback) {
+    Files.download = function(url, callback) {
  
         /* Get file extantion from URL*/
         var ext = url.split('.').pop();
