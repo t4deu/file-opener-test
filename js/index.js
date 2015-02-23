@@ -18,7 +18,7 @@
  */
 var file = null;
 function downloadFile(url) {
-  alert('downloading: 'url);
+  alert('downloading: ' + url);
   Files.download(url, function(f) {
   console.log('finished');
     alert(JSON.stringify(f));

@@ -128,7 +128,9 @@
     };
     var Files = {};
     
-    Files.open = function(path, type, successCallback, errorCallback) {
+    Files.open = function(path, successCallback, errorCallback) {
+        var ext = getExt(path);
+        var type = getMimeByExt(ext);
         if (typeof(successCallback) != 'function') {
             successCallback = function(){
               alert('success');
@@ -142,12 +144,12 @@
         }
  
         if(type === false) {
-            console.log('error: unknown file type');
+            alert('error: unknown file type');
             return;
         }
  
         try {
-            alert('open path:'+ path + 'type: '+ type);            
+            alert('open path:'+ path + ' type: '+ type);            
             cordova.plugins.fileOpener2.open(       
                 path, // You can also use a Cordova-style file uri: cdvfile://localhost/persistent/Download/starwars.pdf        
                 type,       
