@@ -31,8 +31,10 @@ function openFile() {
   Files.open(file);
 }
 
-function openInApp() {
-  window.open(file, '_blank', 'location=no');
+function openInApp(target) {
+  target = target ? target: '_blank';
+  alert(target);
+  window.open(file, target, 'location=no');
 }
 
 var app = {
