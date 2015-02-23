@@ -139,7 +139,7 @@
  
         if (typeof(errorCallback) != 'function') {
             errorCallback = function(e){
-              alert('error: ' + JSON.stringify(e));
+              alert('Error status: ' + e.status + ' - Error message: ' + e.message);
             };
         }
  
