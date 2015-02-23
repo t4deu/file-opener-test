@@ -31,6 +31,10 @@ function openFile() {
   Files.open(file);
 }
 
+function openInApp() {
+  window.open(file, '_blank', 'location=no');
+}
+
 var app = {
     // Application Constructor
     initialize: function() {
