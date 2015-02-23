@@ -129,7 +129,6 @@
     var Files = {};
     
     Files.open = function(path, type, successCallback, errorCallback) {
-        console.log('OOIIIIII');
         if (typeof(successCallback) != 'function') {
             successCallback = function(){
               alert('success');
@@ -148,7 +147,7 @@
         }
  
         try {
-            console.log('open path:'+ path + 'type: '+ type);            
+            alert('open path:'+ path + 'type: '+ type);            
             cordova.plugins.fileOpener2.open(       
                 path, // You can also use a Cordova-style file uri: cdvfile://localhost/persistent/Download/starwars.pdf        
                 type,       
