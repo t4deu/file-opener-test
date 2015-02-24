@@ -42,7 +42,7 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="io.github.pwlin.cordova.plugins.fileopener2" version="1.0.11" />
-    <gap:plugin name="com.yrezgui.hazelnut" version="0.1.1" />
+    <gap:plugin name="com.yrezgui.hazelnut" version="0.2.0" />
     <gap:plugin name="ch.ti8m.documenthandler" version="0.2.1" />
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
