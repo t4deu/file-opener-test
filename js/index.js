@@ -46,7 +46,7 @@ function openQuick() {
 }
 
 function openHandle(url) {
-  alert('opening /w document handler: '+ file);
+  alert('opening /w document handler: '+ url);
   handleDocumentWithURL(
     function() {console.log('success');},
     function(error) {
