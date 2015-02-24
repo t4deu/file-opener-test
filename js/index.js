@@ -39,7 +39,19 @@ function openInApp(target) {
 
 function openQuick() {
   alert('opening /w quicklook: '+ file);
-  HazelnutOpen(file, 'pdf-sample.pdf', function() {}, function(e) {
+  HazelnutOpen(file, 'pdf-sample.pdf', function() {
+    alert('success');
+  }, function(e) {
+    alert('error :' + JSON.stringify(e));
+  });
+  alert('after opening /w quicklook');
+}
+
+function openQuickUrl(url) {
+  alert('opening /w quicklook: '+ url);
+  HazelnutOpen(url, 'pdf-sample.pdf', function() {
+    alert('success');}, 
+  function(e) {
     alert('error :' + JSON.stringify(e));
   });
   alert('after opening /w quicklook');
