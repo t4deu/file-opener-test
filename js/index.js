@@ -38,9 +38,11 @@ function openInApp(target) {
 }
 
 function openQuick() {
+  alert('opening /w quicklook: '+ file);
   window.HazelnutOpen(file, 'Test', function() {}, function(e) {
     alert('error :' + JSON.stringify(e));
   });
+  alert('after opening /w quicklook');
 }
 var app = {
     // Application Constructor
