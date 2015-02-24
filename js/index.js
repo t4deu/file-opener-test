@@ -39,7 +39,7 @@ function openInApp(target) {
 
 function openQuick() {
   alert('opening /w quicklook: '+ file);
-  window.HazelnutOpen(file, 'Test', function() {}, function(e) {
+  window.HazelnutOpen(file, 'Test.pdf', function() {}, function(e) {
     alert('error :' + JSON.stringify(e));
   });
   alert('after opening /w quicklook');
