@@ -37,6 +37,11 @@ function openInApp(target) {
   window.open(file, target, 'location=no');
 }
 
+function openQuick() {
+  window.HazelnutOpen(file, 'Test', function() {}, function(e) {
+    alert('error :' + JSON.stringify(e));
+  });
+}
 var app = {
     // Application Constructor
     initialize: function() {
