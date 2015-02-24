@@ -44,6 +44,22 @@ function openQuick() {
   });
   alert('after opening /w quicklook');
 }
+
+function openHandle(url) {
+  alert('opening /w document handler: '+ file);
+  handleDocumentWithURL(
+    function() {console.log('success');},
+    function(error) {
+      alert('failure '+error);
+      if(error == 53) {
+        console.log('No app that handles this file type.');
+      }
+    }, 
+    url
+  );
+}
+
+
 var app = {
     // Application Constructor
     initialize: function() {
